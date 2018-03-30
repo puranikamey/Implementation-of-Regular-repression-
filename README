@@ -1,0 +1,34 @@
+# Implementation-of-Regular-repression-
+Regular Expression (Floating point, Integers, ID, Extended Floating points, HEXINT )
+An ID begins with an underscore, a lowercase letter from “a”
+    to “m”, or an uppercase letter from “N” to “Z”.  After the first
+    character, an ID may have any number of underscores, decimal
+    digits, lowercase letters “n” to “z”, or uppercase letters
+    from “A” to “M”.
+
+  * An FP is any number of decimal digits, followed by a decimal
+    point “.”, followed by any number of decimal digits.  There must
+    be at least one decimal digit before the decimal point and at
+    least one decimal digit after the decimal point.
+
+  * An EFP is any number of decimal digits, followed by a decimal
+    point “.”, followed by any number of decimal digits, followed
+    by “e” or “E”, followed by “+” or “-”, followed by at least one
+    decimal digit.
+
+    Decimal digits need to be on only one side of the decimal point
+    but having decimal digits on both sides of the decimal point is
+    permitted.
+
+    The exponent (“e” or “E, “+” or “-”, at least one decimal digit)
+    may be omitted if the decimal point is given.  The sign (“+” or
+    “-”) in the exponent is always optional.
+
+    The decimal point may be omitted if the exponent is given.
+
+  * If a proposed token is both an FP and an EFP, it should be
+    reported as being an FP.
+
+  * A HEXINT begins with “0x” or “0X” followed by any number of
+    hexadecimal digits.  There must be at least one hexadecimal
+    digit after the “0x” or “0X”. 
